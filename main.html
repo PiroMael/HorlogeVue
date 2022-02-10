@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+    <link rel="stylesheet" href="stylesheets/application.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="center-container">
+        <h1>Horloge VueJs</h1>
+        <div id="clock">
+            <div class="container-cam1">
+                <div class="cam1-ring1">
+                    <div class="cam1-ring2"></div>
+                </div>
+            </div>
+            <div class="screen">
+                <p class="time"><span class="red">{{ hour }}</span>{{ time }}</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        var clock = new Vue({
+            el: '#clock',
+            data: {
+                time: '',
+                hour: '',
+            }
+        });
+        let Timer = setInterval(updateTime,1000);
+        updateTime();
+        function updateTime (){
+           let nowDate = new Date();
+           clock.time = ':' + nowDate.getMinutes() + '.' + nowDate.getSeconds();
+           clock.hour =  nowDate.getHours();
+        }    
+    </script>
+</body>
+</html>

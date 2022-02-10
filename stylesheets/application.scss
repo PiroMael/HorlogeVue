@@ -1,0 +1,75 @@
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+  margin: 0 0 0 0;
+  background: rgb(255, 255, 255);
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.center-container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+#clock{
+    position: relative;
+    background-color: rgb(28, 28, 39);
+    text-align: center;
+    width: 320px;
+    height: 1000px;
+    margin-bottom: 60px;
+    border-radius:30px;
+}
+.container-cam1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgb(28, 28, 39);
+    width: 50px;
+    height: 40px;
+    top:1%;
+    right: 42%;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    
+    
+}
+.cam1-ring1{
+    background-color: black;
+    width: 20px ;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid rgba(106, 109, 143, 0.486);
+}
+.cam1-ring2{
+    background-color: rgb(255, 255, 255);
+    width: 10px ;
+    height: 10px;
+    border-radius: 50%;
+}
+.screen{
+    
+    background:linear-gradient(rgba(0, 0, 0, 0.205), rgba(0, 0, 0, 0.205)),  url("https://images.pexels.com/photos/1366919/pexels-photo-1366919.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500") no-repeat ;
+    background-size: cover;
+    margin: 0 14px;
+    height: 94.4%;
+    border-radius: 30px;
+}
+.time{
+    color:rgba(255, 255, 255, 0.589);
+    margin-top: 16px;
+    padding-top: 50px;
+    font-size: 40px; 
+}
+.red{
+    color:rgba(253, 32, 32, 0.699) !important;
+}
+
+
